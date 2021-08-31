@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ course.title }}</h1>
+
+    {% if uncompleted_assignments %}
+        <section>
+            <h2>Uncompleted assignments</h2>
+            <ul class="uncompleted assignments">
+                {% for assignment in uncompleted_assignments %}
+                    <li>
+                        {{ assignment.title }} (due {{ assignment.due_date }})
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% else %}
+        <p>You're all caught up &mdash; good job!</p>
+    {% endif %}
+
+    {% if completed_assignments %}
+        <section>
+            <h2>Completed assignments</h2>
+            <ul class="completed assignments">
+                {% for assignment in completed_assignments %}
+                    <li>
+                        {{ assignment.title }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+{% endblock %}
