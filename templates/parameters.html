@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parameters</title>
+</head>
+<body>
+
+<h3>GET form</h3>
+<!-- If action is the empty string, form submits to the same URL -->
+<form action="" method="GET">
+    <!-- type="text": basic text box -->
+    <!-- name="stuff": name of this input's value is stuff -->
+    Stuff: <input type="text" name="stuff">
+    <br>
+    Thing: <input type="checkbox" name="thing">
+    <br>
+    <button type="submit">Submit form</button>
+</form>
+
+<h3>POST form</h3>
+<!-- If action is the empty string, form submits to the same URL -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- type="text": basic text box -->
+    <!-- name="stuff": name of this input's value is stuff -->
+    Stuff: <input type="text" name="stuff">
+    <br>
+    Thing: <input type="checkbox" name="thing">
+    <br>
+    <button type="submit">Submit form</button>
+</form>
+
+</body>
+</html>

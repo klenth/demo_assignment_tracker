@@ -23,4 +23,9 @@ urlpatterns = [
 
     path('', views.home, name='home'),
     path('courses/<int:course_id>', views.view_course, name='view_course'),
+    path('parameters', views.parameters, name='parameters'),
+
+    path('tea/earl/grey/hot', views.easter_egg, name='easter_egg'),
+
+    path('courses/new', views.new_course, name='new_course'),
 ]

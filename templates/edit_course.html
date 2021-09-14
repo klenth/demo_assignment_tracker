@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Course</title>
+</head>
+<body>
+
+    <h1>Edit course</h1>
+
+    <ul class="errors">
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        Title: <input type="text" name="new_title">
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>
